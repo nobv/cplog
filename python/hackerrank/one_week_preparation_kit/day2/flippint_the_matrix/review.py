@@ -36,9 +36,9 @@ def flippingMatrix(matrix):
         for j in range(middle):
             current_matrix = []
             current_matrix.append(matrix[i][j])  # left_top
-            current_matrix.append(matrix[n - 1][j])  # left_bottom
             current_matrix.append(matrix[i][n - j])  # right_top
-            current_matrix.append(matrix[i - 1][j - 1])  # right_bottom
+            current_matrix.append(matrix[n - i][j])  # left_bottom
+            current_matrix.append(matrix[n - i][n - j])  # right_bottom
             result += max(current_matrix)
     return result
 
